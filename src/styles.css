@@ -1,3 +1,64 @@
-body {
-  background-color: rebeccapurple;
+.carousel-img{
+  height: 300px;
+  width: 300px;
+}
+
+.arrow-img{
+  height: 50px;
+}
+
+.carousel{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  grid-area: carousel;
+}
+
+.main{
+  width: 30%;
+  display: grid;
+  grid-template-areas: "arrow-left carousel arrow-right"
+                       "dots dots dots";
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 3fr 1fr;
+}
+
+.left{
+  grid-area: arrow-left;
+}
+
+.right{
+  grid-area: arrow-right;
+}
+
+.dots-div{
+  display: flex;
+  justify-content: center;
+  grid-area: dots;
+}
+
+.dot{
+  padding: 0;
+  font-size: 5em;
+  cursor: pointer;
+}
+
+.arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item:nth-child(n+2){
+  position: absolute;
+}
+
+.visible{
+  z-index: 1;
+}
+
+.dot-visible{
+  color: orange;
 }
